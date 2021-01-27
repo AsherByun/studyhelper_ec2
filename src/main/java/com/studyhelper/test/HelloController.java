@@ -9,4 +9,8 @@ public class HelloController {
 	public String hello() {
 		return "안녕하세요";
 	}
+	@GetMapping("/hellow")
+	public String hellow() {
+		return "Hellow~~";
+	}
 }

@@ -16,9 +16,9 @@ cache:
 script: "./mvnw clean package"
 
 before_deploy:
-  - zip -r studyhelper_ec2 *
-  - mkdir -p deploy
-  - mv studyhelper_ec2.zip deploy/studyhelper-ec2.zip
+ - zip -r studyhelper_ec2 ./*
+ - mkdir -p deploy
+ - mv studyhelper_ec2.zip deploy/studyhelper_ec2.zip
 
 deploy:
  - provider: s3
@@ -31,9 +31,6 @@ deploy:
    acl: public_read
    local_dir: deploy
    wait_until_deployed : true
-   on:
-      repo:  byeunsungjae/studyhelper_ec2
-      branch: master
       
    
 

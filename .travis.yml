@@ -28,7 +28,7 @@ deploy:
    bucket: studyhelper-ec2
    region: ap-northeast-2
    skip_cleanup: true
-   acl: public_read
+   acl: private
    local_dir: deploy
    wait_until_deployed : true
       

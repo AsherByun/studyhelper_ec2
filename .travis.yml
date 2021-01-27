@@ -24,10 +24,9 @@ deploy:
    region: ap-northeast-2
    skip_cleanup: true
    acl: public_read
+   local_dir: deploy
    wait_until_deployed : true
-   on:
-      repo: byeunsungjae/studyhelper_ec2 # Github 주소
-      branch: master
+   
 
 # CI 실행 완료 시 메일로 알람
 notifications:

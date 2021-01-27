@@ -1,6 +1,6 @@
 version: 0.0
 os : ubuntu
-file :
+files :
   - source: /
-    destination: /home/ubuntu/app/step2/zip/
+    destination: /home/ubuntu/app/travis/build/
     overwrite: yes

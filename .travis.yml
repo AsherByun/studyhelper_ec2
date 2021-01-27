@@ -34,7 +34,6 @@ deploy:
    on:
       repo: byeunsungjae/studyhelper_ec2
       branch: master
-   
 - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
@@ -48,7 +47,7 @@ deploy:
     on:
       repo: byeunsungjae/studyhelper_ec2
       branch: master
-# CI 실행 완료 시 메일로 알람
+# CI 실행 완료 시 메일로 알람보내기
 notifications:
  email:
    recipients:

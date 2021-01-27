@@ -13,4 +13,4 @@ cache:
   directories:
     - $HOME/.m2
     - $HOME/.mvnw
-script: "./mvnw clean package
+script: "./mvnw clean package"

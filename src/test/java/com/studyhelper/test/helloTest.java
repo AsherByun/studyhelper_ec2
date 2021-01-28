@@ -20,8 +20,8 @@ public class helloTest {
 	@Autowired
 	private MockMvc mockMvc;
 
-	@Test
-	void helloTest() throws Exception {
-		mockMvc.perform(get("/hello")).andExpect(status().is(HttpStatus.OK.value()));
-	}
+//	@Test
+//	void helloTest() throws Exception {
+//		mockMvc.perform(get("/hello")).andExpect(status().is(HttpStatus.OK.value()));
+//	}
 }

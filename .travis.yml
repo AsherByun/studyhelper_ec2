@@ -16,7 +16,7 @@ cache:
 script: "./mvnw clean package"
 
 before_deploy:
- - zip -r studyhelper_ec2 ./*
+ - zip -r studyhelper_ec2 *
  - mkdir -p deploy
  - mv studyhelper_ec2.zip deploy/studyhelper_ec2.zip
 

@@ -1,6 +1,7 @@
 package com.studyhelper.test;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,9 +14,12 @@ import lombok.AllArgsConstructor;
 public class HelloController {
 	@Autowired
 	private Environment env;
+	@Autowired
+	PropertiesValueTest pvt;
+	
 	@GetMapping("/hello")
 	public String hello() {
-		return "안녕하세요 로로로로로";
+		return "안녕하세요 로로로로로   "+pvt.getName();
 	}
 	@GetMapping("/hellow")
 	public String hellow() {

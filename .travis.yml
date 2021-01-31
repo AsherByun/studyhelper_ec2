@@ -6,6 +6,8 @@ addons:
   apt:
     packages:
       - oracle-java8-installer
+services:
+  -mysql
 before_install:
   - chmod +x mvnw
   # Travis CI 서버의 Home

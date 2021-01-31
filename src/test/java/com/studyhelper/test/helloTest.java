@@ -18,7 +18,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @ActiveProfiles("tester")
 @SpringBootTest(properties = "spring.config.location="
 		+ "file:/C:/Users/Owner/eclipse-workspace/config/real-application.yml,"
-		+ "classpath:application.yml", classes = HelloController.class)
+		+ "classpath:application.yml", classes = {HelloController.class,PropertiesValueTest.class})
 @AutoConfigureMockMvc
 public class helloTest {
 	@Autowired

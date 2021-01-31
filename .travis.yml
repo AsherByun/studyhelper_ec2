@@ -9,8 +9,9 @@ addons:
 services:
   -mysql
 before_install:
+  - mysql -e 'CRATE DATABASE studyhelper'
   - chmod +x mvnw
-  # Travis CI 서버의 Home
+  
 cache:
   directories:
     - $HOME/.m2

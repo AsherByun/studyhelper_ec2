@@ -10,7 +10,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 public class StudyHelperEc2Application {
 	public static String LOCAL_CONFIG = "C:/Users/Owner/eclipse-workspace/config/real-application.yml";
 	public static String APPLICATION_LOCATIONS = " spring.config.location= classpath:application.yml";
-	public static String DEPLOY_CONFIG = "";
+	public static String DEPLOY_CONFIG = "/home/ubuntu/app/travis/config/real-application.yml";
 
 	public static void main(String[] args) {
 		makingApplicationLocations();
@@ -26,7 +26,7 @@ public class StudyHelperEc2Application {
 			APPLICATION_LOCATIONS += ", file:/" + LOCAL_CONFIG;
 		}
 		if (deployFile.exists()) {
-			APPLICATION_LOCATIONS += DEPLOY_CONFIG;
+			APPLICATION_LOCATIONS += ", " + DEPLOY_CONFIG;
 		}
 	}
 

@@ -5,9 +5,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
-@ActiveProfiles("tester")
-@SpringBootTest(properties = "spring.config.location="
-		+ "file:/C:/Users/Owner/eclipse-workspace/config/real-application.yml," + "classpath:application.yml")
+@ActiveProfiles("default")
+@SpringBootTest(properties = "spring.config.location=classpath:application.yml")
 class StudyHelperEc2ApplicationTests {
 
 	@Test

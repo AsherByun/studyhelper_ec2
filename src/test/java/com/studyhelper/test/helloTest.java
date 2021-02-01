@@ -14,12 +14,12 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
+
 @WebAppConfiguration
 @ExtendWith(SpringExtension.class)
-@ActiveProfiles("tester")
-@SpringBootTest(properties = "spring.config.location="
-		+ "file:/C:/Users/Owner/eclipse-workspace/config/real-application.yml,"
-		+ "classpath:application.yml", classes = {HelloController.class,PropertiesValueTest.class})
+@ActiveProfiles("default")
+@SpringBootTest(properties = "spring.config.location=classpath:application.yml", classes = { HelloController.class,
+		PropertiesValueTest.class })
 @AutoConfigureMockMvc
 public class helloTest {
 	@Autowired
